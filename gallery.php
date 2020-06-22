@@ -41,47 +41,52 @@
     <section class="gallery-links">
         <div class="wrapper">
             <h2>Galeria zdjęć</h2>
-            <a href="#">
-                <div class="gallery-link">
-                    <p>Zdjęcie 1</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="gallery-link">
-                    <p>Zdjęcie 2</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="gallery-link">
-                    <p>Zdjęcie 3</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="gallery-link">
-                    <p>Zdjęcie 4</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="gallery-link">
-                    <p>Zdjęcie 5</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="gallery-link">
-                    <p>Zdjęcie 6</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="gallery-link">
-                    <p>Zdjęcie 7</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="gallery-link">
-                    <p>Zdjęcie 8</p>
-                </div>
-            </a>
+
+            <div class="gallery-container">
+                <a href="#">
+                    <div></div>
+                    <h3>Tytuł</h3>
+                    <p>Podpis</p>
+                </a>
+                <a href="#">
+                    <div></div>
+                    <h3>Tytuł</h3>
+                    <p>Podpis</p>
+                </a>
+                <a href="#">
+                    <div></div>
+                    <h3>Tytuł</h3>
+                    <p>Podpis</p>
+                </a>
+                <a href="#">
+                    <div></div>
+                    <h3>Tytuł</h3>
+                    <p>Podpis</p>
+                </a>
+                <a href="#">
+                    <div></div>
+                    <h3>Tytuł</h3>
+                    <p>Podpis</p>
+                </a>
+            </div>
+            <?php
+            if (isset($_SESSION['admin'])) {
+                echo '<div class="gallery-upload">
+                <form action="scripts/gallery_upload.php" method="post" enctype="multipart/form-data">
+                    <input type="text" name="filename" placeholder="File name...">
+                    <input type="text" name="filetitle" placeholder="Image title...">
+                    <input type="text" name="filedesc" placeholder="Image description...">
+                    <input type="file" name="file">
+                    <button type="submit" name="submit">UPLOAD</button>
+
+                </form>
+            </div>';
+            }
+
+
+            ?>
         </div>
+
     </section>
 </main>
 <div id="footer"></div>

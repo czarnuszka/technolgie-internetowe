@@ -12,21 +12,35 @@
     text-transform: uppercase;
 }
 
-.gallery-links .gallery-link {
-    float: left;
-    width: 230px;
-    height: 230px;
-    margin: 20px 10px 0px;
-    border-radius: 10px;
-    background-color: #e3e3e3;
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
 }
 
-.gallery-links .gallery-link p {
-    padding-top: 45%;
+.gallery-container a {
+    width: 230px;
+    margin: 20px 10px 0;
+}
+
+.gallery-container a:hover {
+    opacity: 0.8;
+}
+
+.gallery-container a div {
+    width: 100%;
+    height: 235px;
+    background-color: green;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gallery-container a h3 {
     font-family: Catamaran;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: #111;
-    text-align: center;
-    text-transform: uppercase;
 }
