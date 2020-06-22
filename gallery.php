@@ -43,31 +43,31 @@
             <h2>Galeria zdjęć</h2>
 
             <div class="gallery-container">
-                <a href="#">
-                    <div></div>
-                    <h3>Tytuł</h3>
-                    <p>Podpis</p>
-                </a>
-                <a href="#">
-                    <div></div>
-                    <h3>Tytuł</h3>
-                    <p>Podpis</p>
-                </a>
-                <a href="#">
-                    <div></div>
-                    <h3>Tytuł</h3>
-                    <p>Podpis</p>
-                </a>
-                <a href="#">
-                    <div></div>
-                    <h3>Tytuł</h3>
-                    <p>Podpis</p>
-                </a>
-                <a href="#">
-                    <div></div>
-                    <h3>Tytuł</h3>
-                    <p>Podpis</p>
-                </a>
+                <?php
+
+                include_once 'scripts/config/database.php';
+                $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                $result = $connection->query("SELECT * FROM gallery");
+
+                $sql = "SELECT * FROM gallery ORDER BY orderGallery DESC;";
+                $stmt = mysqli_stmt_init($connection);
+                if (!mysqli_stmt_prepare($stmt, $sql)) {
+                    echo "SQL statement failed";
+                } else {
+                    mysqli_stmt_execute($stmt);
+                    $result = mysqli_stmt_get_result($stmt);
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '<a href="#">
+                        <div style="background-image: url(img/gallery/'.$row["imgFullNameGallery"].');"></div>
+                        <h3>'.$row["titleGallery"].'</h3>
+                        <p>'.$row["descGallery"].'</p>
+                    </a>';
+                    }
+                }
+
+
+                ?>
             </div>
             <?php
             if (isset($_SESSION['admin'])) {
