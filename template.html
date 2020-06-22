@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#navigationMenu").load("navigationMenu.php");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+<header>
+    <div id="navigationMenu"></div>
+    <nav id="login">
+        <!-Logowanie-->
+        <a href="signUp.php" class="header-login">Załóż konto</a>
+        <a href="signIn.php" class="header-login">Zaloguj się</a>
+    </nav>
+</header>
+<main>
+    <div class="wrapper">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat odio ut tellus congue, pellentesque sodales sapien mattis. Pellentesque aliquam vitae massa et pharetra. Aliquam hendrerit libero ligula. In luctus ac velit non cursus. Nunc fermentum elementum convallis. Cras fringilla leo ut semper molestie. Etiam finibus euismod nisi non rhoncus. Donec dapibus nulla neque, a interdum purus ullamcorper ac. Quisque luctus tellus eu augue volutpat, eget dictum ipsum dictum. Vestibulum pulvinar, erat eu feugiat placerat, lectus tellus tincidunt lectus, in facilisis ex ex in odio. Aliquam ornare vestibulum scelerisque. Suspendisse vel bibendum ligula. Sed rhoncus nunc a velit sodales, et molestie ante viverra. Aenean libero nisi, ultrices sit amet cursus eu, porta id dolor. Nam euismod elit nibh, id sagittis nulla facilisis semper. Fusce lacus ligula, ornare at ultricies a, commodo in orci. Phasellus lacinia blandit nisl, at rhoncus lacus dapibus vel. Maecenas augue libero, consequat non eros pellentesque, egestas placerat turpis. Aliquam tempor augue libero. Nullam tempus rhoncus tellus, ac dapibus purus eleifend vulputate. Integer faucibus orci sed urna interdum luctus quis ut tortor. Vivamus blandit quis turpis a ornare. Vivamus viverra ex quis pharetra varius. Ut mattis tempor nibh, vel interdum ligula dignissim at. Praesent dignissim erat a lectus malesuada, ac iaculis velit feugiat.</p>
+    </div>
+
+</main>
+<div id="footer"></div>
+</body>
+
+</html>

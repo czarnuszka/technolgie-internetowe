@@ -1,0 +1,32 @@
+.gallery-links {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.gallery-links h2 {
+    font-family: Catamaran;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gallery-links .gallery-link {
+    float: left;
+    width: 230px;
+    height: 230px;
+    margin: 20px 10px 0px;
+    border-radius: 10px;
+    background-color: #e3e3e3;
+}
+
+.gallery-links .gallery-link p {
+    padding-top: 45%;
+    font-family: Catamaran;
+    font-size: 24px;
+    font-weight: 600;
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+}

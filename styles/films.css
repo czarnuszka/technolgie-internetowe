@@ -1,0 +1,35 @@
+.vid-style h2 {
+    font-family: Catamaran;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.vid-style video {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.vid-style article h3 {
+    font-family: Catamaran;
+    font-size: 22px;
+    font-weight: 600;
+    color: #111;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.vid-style article div p {
+    font-family: Catamaran;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #111;
+
+    column-count: 3;
+    column-gap: 30px;
+}
