@@ -36,7 +36,7 @@
                     $imageFullName = $newFileName . "." . uniqid("", true) . "." . $fileActualExt;
                     $fileDestination = "../img/gallery/" . $imageFullName;
 
-                    //połączenie z bazą galerii
+                    //połączenie z bazą danych
                     include_once "config/database.php";
                     $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
                     $result = $connection->query("SELECT * FROM gallery");
@@ -55,9 +55,10 @@
                             $rowCount = mysqli_num_rows($result);
                             $setImageOrder = $rowCount + 1;
 
+                            //Zapis plikóww do bazy
                             $sql = "INSERT INTO gallery (titleGallery, 	descGallery, imgFullNameGallery, orderGallery) VALUES (?, ?, ?, ?);";
                             if (!mysqli_stmt_prepare($stmt, $sql)) {
-                                echo "SQL statement failed";
+                                echo "Błąd instrukcji SQL";
                             } else {
                                 mysqli_stmt_bind_param($stmt, "ssss", $imageTitle, $imageDesc, $imageFullName, $setImageOrder);
                                 mysqli_stmt_execute($stmt);
@@ -69,15 +70,16 @@
                         }
                     }
                 } else {
-                    echo "File size is too big!";
+                    echo "Zbyt duży rozmiar pliku";
                     exit();
                 }
             } else {
-                echo "You had aan error!";
+                echo "Błąd!";
                 exit();
             }
         } else {
-            echo "You need to upload a proper file type";
+            echo "Nie wybrano pliku";
+            header("Location: ../gallery.php");
             exit();
         }
 

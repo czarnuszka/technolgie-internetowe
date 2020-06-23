@@ -40,7 +40,7 @@ $user = getUserDataById($connection, $_SESSION['id']);
         <!-Logowanie-->
         <?php
         if (isset($_SESSION['logged'])) {
-            echo '<a href="scripts/logout.php" class="header-login">Wyloguj się!</a>';
+            echo '<a href="scripts/logout.php" class="header-logout">Wyloguj się!</a>';
             echo '<a href="profile.php" class="header-loggedin">Witaj ' . $_SESSION['name'] . '</a>';
         } else {
             echo '<a href="signUp.php" class="header-login">Załóż konto</a>';
