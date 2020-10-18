@@ -1,15 +1,14 @@
 <?php
+session_start();
 
-	session_start();
-
-    if (!isset($_SESSION['successful_registration']))
-	{
-		header('Location: index.php');
-		exit();
-	}
-    else {
-        unset($_SESSION['successful_registration']);
-    }
+if (!isset($_SESSION['successful_registration']))
+{
+    header('Location: index.php');
+    exit();
+}
+else {
+    unset($_SESSION['successful_registration']);
+}
 
 ?>
 
